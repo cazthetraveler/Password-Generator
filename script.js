@@ -25,6 +25,36 @@ var generateBtn = document.querySelector("#generate");
 //THEN the password is either displayed in an alert or written to the page
 
 function generatePassword() {
+  var criteria = {
+    lowerCase: confirm("Include lowercase characters?"),
+    upperCase: confirm("Include uppercase characters?"),
+    numeric: confirm("Include numbers?"),
+    specialCharacter: confirm("Include special characters?")
+  }
+
+  if (!criteria.lowerCase && !criteria.upperCase && !criteria.numeric && !criteria.specialCharacter) {
+    alert("At least one criteria field must be confirmed!!");
+    console.log("what the flip dude do you want this password or not >:((");
+  } else {
+    console.log("Criteria is met :))");
+    var length = prompt("Enter a number value between 8 and 128 characters.");
+
+    if (length < 8 || length > 128) {
+      alert("What did u not understand about entering a password length betwen 8 and 128 characters?");
+    } else {
+      console.log("Length is valid :))");
+    }
+  }
+
+  if (criteria.lowerCase === true) {
+    var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+    console.log("We are using lowercase!!");
+  } else {
+    lowerCase = "";
+  }
+
+
+
 
 }
 
