@@ -51,9 +51,32 @@ function generatePassword() {
     console.log("We are using lowercase!!");
   } else {
     lowerCase = "";
+    console.log("We are NOT using lowercase.")
+  }
+  if (criteria.upperCase === true) {
+    var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    console.log("We are using uppercase!!");
+  } else {
+    upperCase = "";
+    console.log("We are NOT using uppercase.")
+  }
+  if (criteria.numeric === true) {
+    var numeric = "0123456789";
+    console.log("We are using numbers!!");
+  } else {
+    numeric = "";
+    console.log("We are NOT using numbers.")
+  }
+  if (criteria.specialCharacter === true) {
+    var specialCharacter = "!@#$%^&*()_+-=<>,.?;";
+    console.log("We are using special characters!!");
+  } else {
+    specialCharacter = "";
+    console.log("We are NOT using special characters.")
   }
 
-
+  var criteriaSet = lowerCase + upperCase + numeric + specialCharacter;
+  console.log(criteriaSet);
 
 
 }
