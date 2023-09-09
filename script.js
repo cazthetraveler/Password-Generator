@@ -34,13 +34,14 @@ function generatePassword() {
 
   if (!criteria.lowerCase && !criteria.upperCase && !criteria.numeric && !criteria.specialCharacter) {
     alert("At least one criteria field must be confirmed!!");
-    console.log("what the flip dude do you want this password or not >:((");
+    console.log("All confirmations are false :PP");
   } else {
     console.log("Criteria is met :))");
     var length = prompt("Enter a number value between 8 and 128 characters.");
 
     if (length < 8 || length > 128) {
-      alert("What did u not understand about entering a password length betwen 8 and 128 characters?");
+      alert("A value between 8 and 128 needs to be entered!!");
+      return;
     } else {
       console.log("Length is valid :))");
     }
@@ -91,8 +92,6 @@ function generatePassword() {
 
   console.log(final);
   return final;
-
-
 }
 
 // Write password to the #password input
