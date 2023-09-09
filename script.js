@@ -80,12 +80,17 @@ function generatePassword() {
   var criteriaSet = lowerCase + upperCase + numeric + specialCharacter;
   console.log(criteriaSet);
 
+  var genPass = [];
+
   for (var i = 0; i < length; i++) {
-    var newPassword = criteriaSet(Math.floor(Math.random) * criteriaSet.length);
+    var newPassword = criteriaSet[Math.floor(Math.random() * criteriaSet.length)];
+    genPass.push(newPassword);
   }
 
-  console.log(newPassword);
-  return newPassword;
+  var final = genPass.join("");
+
+  console.log(final);
+  return final;
 
 
 }
