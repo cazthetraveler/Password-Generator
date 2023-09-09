@@ -75,8 +75,17 @@ function generatePassword() {
     console.log("We are NOT using special characters.")
   }
 
+  // the actual randomization
+
   var criteriaSet = lowerCase + upperCase + numeric + specialCharacter;
   console.log(criteriaSet);
+
+  for (var i = 0; i < length; i++) {
+    var newPassword = criteriaSet(Math.floor(Math.random) * criteriaSet.length);
+  }
+
+  console.log(newPassword);
+  return newPassword;
 
 
 }
